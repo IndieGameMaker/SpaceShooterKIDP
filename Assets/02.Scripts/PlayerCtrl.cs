@@ -7,6 +7,8 @@ public class PlayerCtrl : MonoBehaviour
     private float v;
     private float h;
 
+    public float moveSpeed = 6.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +23,9 @@ public class PlayerCtrl : MonoBehaviour
         h = Input.GetAxis("Horizontal");
 
         // 전진 / 후진 처리
-        transform.Translate(Vector3.forward * Time.deltaTime * v * 6.0f);
+        transform.Translate(Vector3.forward * Time.deltaTime * v * moveSpeed);
         // 좌우 이동처리
-        transform.Translate(Vector3.right * Time.deltaTime * h * 6.0f);
+        transform.Translate(Vector3.right * Time.deltaTime * h * moveSpeed);
     }
 }
 
