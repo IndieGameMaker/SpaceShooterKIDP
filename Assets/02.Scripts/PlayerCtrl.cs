@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCtrl : MonoBehaviour
 {
     private float v;
+    private float h;
 
     // Start is called before the first frame update
     void Start()
@@ -17,10 +18,12 @@ public class PlayerCtrl : MonoBehaviour
     {
         // 키보드 입력값을 받아오기
         v = Input.GetAxis("Vertical");  // -1.0f ~ 0.0f ~ +1.0f
-        Debug.Log("v=" + v);
+        h = Input.GetAxis("Horizontal");
 
-
+        // 전진 / 후진 처리
         transform.Translate(Vector3.forward * v * 0.01f);
+        // 좌우 이동처리
+        transform.Translate(Vector3.right * h * 0.01f);
     }
 }
 
