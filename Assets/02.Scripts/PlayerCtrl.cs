@@ -15,6 +15,7 @@ public class PlayerCtrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Animator 컴포넌트 추출해서 변수에 대입(할당)
         animator = GetComponent<Animator>();
     }
 
@@ -29,6 +30,18 @@ public class PlayerCtrl : MonoBehaviour
         transform.Translate(Vector3.forward * Time.deltaTime * v * moveSpeed);
         // 좌우 이동처리
         transform.Translate(Vector3.right * Time.deltaTime * h * moveSpeed);
+
+        // 애니메이션 컨트롤
+        if (v == 0.0f && h == 0.0f) // AND 조건
+        {
+            // Idle 애니메이션
+            animator.SetBool("Forward", false);
+        }
+        else
+        {
+            // RunF 애니메이션
+            animator.SetBool("Forward", true);
+        }
     }
 }
 
