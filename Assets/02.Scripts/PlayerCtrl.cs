@@ -21,9 +21,9 @@ public class PlayerCtrl : MonoBehaviour
         h = Input.GetAxis("Horizontal");
 
         // 전진 / 후진 처리
-        transform.Translate(Vector3.forward * v * 0.01f);
+        transform.Translate(Vector3.forward * Time.deltaTime * v * 6.0f);
         // 좌우 이동처리
-        transform.Translate(Vector3.right * h * 0.01f);
+        transform.Translate(Vector3.right * Time.deltaTime * h * 6.0f);
     }
 }
 
