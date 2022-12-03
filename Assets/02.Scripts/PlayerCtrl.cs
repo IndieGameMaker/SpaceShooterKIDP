@@ -23,8 +23,8 @@ public class PlayerCtrl : MonoBehaviour
     void Update()
     {
         // 키보드 입력값을 받아오기
-        v = Input.GetAxis("Vertical");  // -1.0f ~ 0.0f ~ +1.0f
-        h = Input.GetAxis("Horizontal");
+        v = Input.GetAxis("Vertical");   // -1.0f ~ 0.0f ~ +1.0f
+        h = Input.GetAxis("Horizontal"); // -1.0f ~ 0.0f ~ +1.0f
 
         // 전진 / 후진 처리
         transform.Translate(Vector3.forward * Time.deltaTime * v * moveSpeed);
