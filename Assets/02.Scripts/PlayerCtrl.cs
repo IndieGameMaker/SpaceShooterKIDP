@@ -9,10 +9,13 @@ public class PlayerCtrl : MonoBehaviour
 
     public float moveSpeed = 6.0f;
 
+    // Animator 컴포넌트를 저장할 변수를 선언
+    [SerializeField] private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
