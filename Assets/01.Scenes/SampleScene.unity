@@ -185,7 +185,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26206483}
-  m_LocalRotation: {x: 0.058395, y: -0.0000000037189338, z: 2.1753835e-10, w: 0.9982936}
+  m_LocalRotation: {x: 0.05839499, y: -4.464887e-26, z: 6.938894e-18, w: 0.9982936}
   m_LocalPosition: {x: 0.229, y: 2.24, z: -4.251}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -601,6 +601,7 @@ MonoBehaviour:
   firePos: {fileID: 660021608}
   audio: {fileID: 923754090}
   fireSfx: {fileID: 8300000, guid: 3988c7241ff434c2a900f22726ee7a08, type: 3}
+  muzzleFlash: {fileID: 0}
 --- !u!82 &923754090
 AudioSource:
   m_ObjectHideFlags: 0
@@ -774,7 +775,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.058395, y: -0.0000000037189338, z: 2.1753835e-10, w: 0.9982936}
+  m_LocalRotation: {x: 0.05839499, y: -4.464887e-26, z: 6.938894e-18, w: 0.9982936}
   m_LocalPosition: {x: 0.229, y: 2.24, z: -4.251}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1426,7 +1427,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7ecfdb2ffa9ff4ce1bb9caa27ddfda48, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

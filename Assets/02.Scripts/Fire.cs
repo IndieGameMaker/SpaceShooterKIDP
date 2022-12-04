@@ -20,6 +20,7 @@ public class Fire : MonoBehaviour
     void Start()
     {
         muzzleFlash = firePos.GetComponentInChildren<MeshRenderer>();
+        muzzleFlash.enabled = false;
     }
 
     void Update()
@@ -40,6 +41,20 @@ public class Fire : MonoBehaviour
         // AudioSource.Play() -> BGM
         // AudioSource.PlayOneShot() -> 중첩해서 소리를 발생시킬수 있음.
         audio.PlayOneShot(fireSfx);
+
+        // 총구화염 효과 발생
+        ShowMuzzleFlash();
+    }
+
+    // 코루틴 Co-routine
+    IEnumerator ShowMuzzleFlash()
+    {
+        muzzleFlash.enabled = true;
+
+        // Waitting ...
+        yield return new WaitForSeconds(0.2f);
+
+        muzzleFlash.enabled = false;
     }
 }
 
