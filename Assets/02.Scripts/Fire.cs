@@ -43,7 +43,7 @@ public class Fire : MonoBehaviour
         audio.PlayOneShot(fireSfx);
 
         // 총구화염 효과 발생
-        ShowMuzzleFlash();
+        StartCoroutine(ShowMuzzleFlash());
     }
 
     // 코루틴 Co-routine
@@ -65,5 +65,12 @@ public class Fire : MonoBehaviour
     2. Skybox - 6 Sided Sky
     3. Sky dome
 
+
+*/
+
+/*
+    코루틴 (Co-routine)
+    - Multi Thread 아님,
+    - 협력처리 루틴
 
 */
