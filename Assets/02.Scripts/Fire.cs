@@ -10,7 +10,7 @@ public class Fire : MonoBehaviour
     [SerializeField] private Transform firePos;
 
     // 소리를 발생시키는 AudioSource 컴포넌트를 저장할 변수
-    [SerializeField] private AudioSource audio;
+    [SerializeField] private new AudioSource audio;
     // 총알 효과음 음원파일(AudioClip)
     [SerializeField] private AudioClip fireSfx;
 
@@ -18,9 +18,14 @@ public class Fire : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) == true)
         {
-            // 총알 생성
-            // Instantiate (생성할객체, 생성좌표, 생성각도);
-            Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+            FireBullet();
         }
+    }
+
+    void FireBullet()
+    {
+        // 총알 생성
+        // Instantiate (생성할객체, 생성좌표, 생성각도);
+        Instantiate(bulletPrefab, firePos.position, firePos.rotation);
     }
 }
