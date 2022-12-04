@@ -9,15 +9,13 @@ public class Fire : MonoBehaviour
     // 총알을 생성할 위치정보를 저장할 변수
     [SerializeField] private Transform firePos;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetMouseButtonDown(0) == true)
+        {
+            // 총알 생성
+            // Instantiate (생성할객체, 생성좌표, 생성각도);
+            Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+        }
     }
 }
