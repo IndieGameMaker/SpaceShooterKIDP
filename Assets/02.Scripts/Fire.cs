@@ -79,3 +79,10 @@ public class Fire : MonoBehaviour
     - 협력처리 루틴
 
 */
+
+
+/*
+    A* PathFinding
+    
+    Navigation
+*/
