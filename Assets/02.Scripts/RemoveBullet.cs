@@ -30,3 +30,11 @@ public class RemoveBullet : MonoBehaviour
         void OnTriggerStay()
         void OnTriggerExit()
 */
+
+/*  Sound
+
+    AudioListener : 소리를 듣는 역할, 하나만 존재
+
+    AudioSource : 소리를 발생시키는 역할, 복수개가 가능
+
+*/

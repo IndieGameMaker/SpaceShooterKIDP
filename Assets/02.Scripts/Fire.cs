@@ -9,6 +9,11 @@ public class Fire : MonoBehaviour
     // 총알을 생성할 위치정보를 저장할 변수
     [SerializeField] private Transform firePos;
 
+    // 소리를 발생시키는 AudioSource 컴포넌트를 저장할 변수
+    [SerializeField] private AudioSource audio;
+    // 총알 효과음 음원파일(AudioClip)
+    [SerializeField] private AudioClip fireSfx;
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0) == true)
