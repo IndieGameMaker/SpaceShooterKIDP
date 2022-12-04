@@ -34,3 +34,13 @@ public class Fire : MonoBehaviour
         audio.PlayOneShot(fireSfx);
     }
 }
+
+/*
+    하늘 표현 방식
+
+    1. Procedural Sky
+    2. Skybox - 6 Sided Sky
+    3. Sky dome
+
+
+*/
