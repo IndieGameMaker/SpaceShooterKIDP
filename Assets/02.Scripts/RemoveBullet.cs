@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class RemoveBullet : MonoBehaviour
 {
-    void OnCollisionEtner(Collision coll)
+    void OnCollisionEnter(Collision coll)
     {
+        Debug.Log("aaa");
         // 충돌한 객체의 태그를 비교
         if (coll.gameObject.tag == "BULLET")
         {
@@ -13,6 +14,7 @@ public class RemoveBullet : MonoBehaviour
             Destroy(coll.gameObject);
         }
     }
+
 }
 
 
