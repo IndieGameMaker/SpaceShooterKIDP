@@ -10,6 +10,7 @@ public class MonsterCtrl : MonoBehaviour
     // 주인공의 Transform 컴포넌트를 저장할 변수
     [SerializeField] private Transform playerTr;
 
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -27,7 +28,16 @@ public class MonsterCtrl : MonoBehaviour
 
     void Update()
     {
-        // agent의 목적지를 지정
-        agent.SetDestination(playerTr.position);
+        float distance = Vector3.Distance(transform.position, playerTr.position);
+
+        if (distance <= 10.0f)
+        {
+            // agent의 목적지를 지정
+            agent.SetDestination(playerTr.position);
+        }
+        else
+        {
+            agent.isStopped = true;
+        }
     }
 }
