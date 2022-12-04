@@ -14,6 +14,14 @@ public class Fire : MonoBehaviour
     // 총알 효과음 음원파일(AudioClip)
     [SerializeField] private AudioClip fireSfx;
 
+    // 총구화염 효과를 위해 MuzzleFlash의 MeshRenderer 컴포넌트를 저장할 변수
+    [SerializeField] private MeshRenderer muzzleFlash;
+
+    void Start()
+    {
+        muzzleFlash = firePos.GetComponentInChildren<MeshRenderer>();
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0) == true)
