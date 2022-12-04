@@ -49,6 +49,10 @@ public class Fire : MonoBehaviour
     // 코루틴 Co-routine
     IEnumerator ShowMuzzleFlash()
     {
+        // 텍스처 오프셋을 변경
+        // (0, 0) , (0.5, 0), (0.5, 0.5), (0, 0.5) -> 0, 0.5
+        Vector2 offset = new Vector2(Random.Range(0, 2) * 0.5f, Random.Range(0, 2) * 0.5f);
+
         muzzleFlash.enabled = true;
 
         // Waitting ...
