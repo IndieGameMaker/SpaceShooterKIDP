@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class RemoveBullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnCollisionEtner(Collision coll)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        // 충돌한 객체의 태그를 비교
+        if (coll.gameObject.tag == "BULLET")
+        {
+            // 충돌한 총알을 삭제
+            Destroy(coll.gameObject);
+        }
     }
 }
 
