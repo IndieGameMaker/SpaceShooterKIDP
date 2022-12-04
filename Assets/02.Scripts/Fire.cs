@@ -27,5 +27,10 @@ public class Fire : MonoBehaviour
         // 총알 생성
         // Instantiate (생성할객체, 생성좌표, 생성각도);
         Instantiate(bulletPrefab, firePos.position, firePos.rotation);
+
+        // 사운드 발생
+        // AudioSource.Play() -> BGM
+        // AudioSource.PlayOneShot() -> 중첩해서 소리를 발생시킬수 있음.
+        audio.PlayOneShot(fireSfx);
     }
 }
